@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production build
+dist/
+build/
+frontend/dist/
+
+# Environment files & Secrets
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env
+
+# Allow environment example files
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Vite / OS Cache
+.vite/
+.DS_Store
+Thumbs.db

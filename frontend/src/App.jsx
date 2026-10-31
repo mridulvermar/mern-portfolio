@@ -1,27 +1,33 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Projects from "./components/Projects.jsx";
-import Experience from "./components/Experience.jsx";
-import Education from "./components/Education.jsx";
-import Certifications from "./components/Certifications.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Education />
-      <Certifications />
-      <Contact />
-      <Footer />
-    </>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col transition-colors duration-300">
+        <Navbar />
+        <main className="flex-1">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+        <Chatbot />
+      </div>
+    </ThemeProvider>
   );
 }
